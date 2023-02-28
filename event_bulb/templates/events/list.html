@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <main>
+    <section id="event-list" class="card-background">
+      <section class="card">
+        <h2>Upcoming Events</h2>
+      </section>
+      <section class="card">
+        <form action="{% url 'events_list' %}" method="get" class="filter-controls-form">
+          <input type="text" name="query" placeholder="title"/>
+          <select name="title">
+            <option disabled selected>Select title</option>
+            <option value="Code your future">Code your future</option>
+            <option value="Django Meetup">Django Meetup</option>
+      </select>
+      <button type="submit">Search</button>
+      </form>
+      </section>
+      <ul class="events-list">
+        {% for event in events %}
+          <li class="card event">
+            <img class="event-image" src="{% static 'images/image_placeholder.jpg' %}" alt="">
+            <div class="event-info">
+              <h2>{{ event.title }}</h2>
+              <h3>{{ event.datetime }} | £{{ event.cost }}</h3>
+              <p>{{ event.description }}</p>
+            </div>
+            <div class="event-controls">
+              <a href="{% url 'events_details' event.id %}" class="button gray">Details</a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </main>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <main class="wrap-content">
+    <div class="card-background half-width event-details">
+      <section class="card event-header">
+        <div class="event-info">
+          <h2 class="event-title">{{ event.title }}</h2>
+          <h3>{{ event.datetime }}</h3>
+        </div>
+      </section>
+      <section class="card">
+        <img src="{% static 'images/image_placeholder.jpg' %}" alt="Placeholder">
+      </section>
+      <section class="card">
+        <p class="event-cost">Price: £{{ event.cost }}</p>
+        <p>{{ event.description }}</p>
+      </section>
+    </div>
+  </main>
+{% endblock %}
