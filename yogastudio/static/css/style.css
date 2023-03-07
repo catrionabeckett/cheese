@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(201, 251, 201);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Chiswick Sans', Helvetica, Arial, sans-serif;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  .navbar .site-heading {
+    font-size: 2.25rem;
+    margin-right: 1rem;
+  }
+  
+  .navbar > .auth-nav {
+    justify-self: flex-end;
+  }
+  
+  .navbar nav > ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar nav > ul > li {
+    margin-right: 1rem;
+  }
+  
+  .navbar nav > ul > li > a, .navbar nav > ul > li > span {
+    font-size: 1.125rem;
+  }
+
+  .card-background {
+    background-color: var(--gray-light);
+    padding: 0.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card {
+    margin: 0.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: khaki
+  }
+
+  .landing-image {
+    border-radius: 100%;
+    height: 5rem;
+    flex-shrink: 0;
+    width: 5rem;
+    margin-right: 1.5rem;
+    object-fit: cover;
+  }
+
+  .logo {
+    border-radius: 100%;
+    height: 5rem;
+    flex-shrink: 0;
+    width: 5rem;
+    margin-right: 1.5rem;
+    object-fit: cover;
+
+  }
+
+  .button.yellow {
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow-accent);
+  }
+  
